@@ -1,15 +1,11 @@
-<template>
-
-
-
-
-</template>
+<template></template>
 
 <script>
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import Pop from '../utils/Pop';
 import { logger } from '../utils/Logger';
 import { blogsService } from '../services/BlogsService.js';
+import { AppState } from '../AppState';
 export default {
   setup() {
     onMounted(() => {
@@ -28,7 +24,7 @@ export default {
     }
 
     return {
-
+      blogs: computed(() => AppState.blogs)
     }
   }
 }

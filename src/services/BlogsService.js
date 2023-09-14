@@ -8,7 +8,7 @@ class BlogsService {
     async getBlogs() {
         // AppState.blogs = []
         const res = await api.get('api/blogs')
-        // logger.log(`gettin' them blogs`, res.data)
+        logger.log(`gettin' them blogs`, res.data)
         AppState.blogs = res.data.map(blog => new Blog(blog))
     }
 
