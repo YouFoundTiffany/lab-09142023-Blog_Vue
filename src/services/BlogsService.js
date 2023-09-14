@@ -16,6 +16,18 @@ class BlogsService {
         AppState.activeBlog = blog
     }
 
+    async searchTopics(searchTerm) {
+        const res = await api.get(`search/blog?query=${searchTerm}`)
+        logger.log('searching', res.data)
+        AppState.blogs = res.data.map(blog => new Blog(blog))
+        AppState.searchTerm = searchTerm
+    }
+
+    // async clearSearch(){
+    //     AppState.searchTerm = ''
+    //     await blogsService.getblogs()
+
+    //   }
 
 }
 
