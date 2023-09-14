@@ -21,9 +21,11 @@ import Pop from '../utils/Pop.js';
 
 export default {
     setup() {
-        const blogData = ref({})
+        const searchTerm = ref({})
         return {
-            blogData,
+            searchTerm,
+            activeSearch: computed(() => AppState.searchTerm),
+
 
         }
     }
