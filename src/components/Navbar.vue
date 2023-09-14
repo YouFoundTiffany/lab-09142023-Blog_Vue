@@ -4,7 +4,7 @@
       <div class="d-flex flex-column align-items-center">
         <h2><img class="logo"
             src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80">
-          <span></span>Blogs
+          <span>Blogs</span>
         </h2>
       </div>
     </router-link>
