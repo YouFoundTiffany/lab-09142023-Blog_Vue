@@ -1,7 +1,12 @@
 <template>
-    <div class="row">
+    <form class="component row justify-content-between">
+        <div class="mb-1 col-8">
+            <input type="text" class="form-control" type="text" placeholder="title">
+        </div>
+        <div class="mb-1 col-3">
 
-    </div>
+        </div>
+    </form>
 </template>
 
 <script>
