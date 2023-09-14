@@ -1,4 +1,7 @@
-<template></template>
+<template>
+  <!-- BLOG CARD STARTS HERE -->
+  <div></div>
+</template>
 
 <script>
 import { computed, onMounted } from 'vue';
