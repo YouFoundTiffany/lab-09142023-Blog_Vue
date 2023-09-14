@@ -23,8 +23,19 @@
 
 <script>
 import { AppState } from '../AppState.js';
-import
+import { computed, reactive, onMounted, ref } from 'vue';
+import Pop from '../utils/Pop.js';
 
+
+export default {
+    setup() {
+        const blogData = ref({})
+        return {
+            blogData,
+
+        }
+    }
+}
 </script>
 
 <style class="scss" scoped></style>
