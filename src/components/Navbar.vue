@@ -36,7 +36,13 @@ export default {
 </script>
 
 <style scoped>
-.
+.logo {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50em;
+}
 
 a:hover {
   text-decoration: none;
