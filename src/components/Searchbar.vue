@@ -17,7 +17,8 @@
 import { AppState } from '../AppState.js';
 import { computed, reactive, onMounted, ref } from 'vue';
 import Pop from '../utils/Pop.js';
-
+import { blogsService } from '../services/BlogsService.js';
+import { logger } from '../utils/Logger.js';
 
 export default {
     setup() {
@@ -26,7 +27,14 @@ export default {
             searchTerm,
             activeSearch: computed(() => AppState.searchTerm),
 
-
+            async searchTopics(event) {
+                try {
+                    await blogsService.searchTopics(searchTerm.value)
+                    logger.log(searchTerm.value)
+                } catch (error) {
+                    Pop.error(error)
+                }
+            }
         }
     }
 }
