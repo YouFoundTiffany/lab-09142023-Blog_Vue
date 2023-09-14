@@ -1,9 +1,13 @@
 <template>
-  <!-- BLOG CARD STARTS HERE -->
-  <div></div>
+  <div v-for="blog in blogs" :key="blog.id">
+    <BlogCard :blog="blog" />
+    <!-- BLOG CARD STARTS HERE -->
+
+  </div>
 </template>
 
 <script>
+import BlogCard from '../components/BlogCard.vue';
 import { computed, onMounted } from 'vue';
 import Pop from '../utils/Pop';
 import { logger } from '../utils/Logger';
@@ -28,8 +32,9 @@ export default {
 
     return {
       blogs: computed(() => AppState.blogs)
-    }
-  }
+    };
+  },
+  components: { BlogCard }
 }
 </script>
 
