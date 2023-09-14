@@ -5,10 +5,10 @@
 
                 <div class="d-flex justify-content-between">
                     <img class="profile-pic" :src="blog.creator.picture" alt="">
+                    <!-- TODO make this name and/or the profile pic clickable to bring user to the profile page.  -->
                     <p>{{ blog.creator.name }}</p>
                 </div>
-                <div class="col-3">
-                </div>
+
 
                 <div class="col-3">
                     <div>{{ blog.title }}</div>
