@@ -18,8 +18,8 @@
 <script>
 import { Blog } from '../models/Blog.js';
 
-props: { blog: { type: Blog, required: true } },
 export default {
+    props: { blog: { type: Blog, required: true } },
     setup(props) {
         return {};
     },
