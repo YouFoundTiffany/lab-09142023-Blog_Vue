@@ -1,29 +1,34 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="p-2 col-4 card w-100 rounded elevation-5">
+    <!-- TODO will need a router link top and bottom to go to the Details Page. -->
+    <!-- :to="{name: 'Blog Details', params: {blogId: blog.id}}" -->
+    <router-link :to="{ name: 'Blog Details', params: { blogId: blog.id } }">
 
-                <div class="d-flex justify-content-between">
-                    <img class="profile-pic" :src="blog.creator.picture" alt="">
-                    <!-- TODO make this name and/or the profile pic clickable to bring user to the profile page.  -->
-                    <p>{{ blog.creator.name }}</p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="p-2 col-4 card w-100 rounded elevation-5">
+
+                    <div class="d-flex justify-content-between">
+                        <img class="profile-pic" :src="blog.creator.picture" alt="">
+                        <!-- TODO make this name and/or the profile pic clickable to bring user to the profile page.  -->
+                        <p>{{ blog.creator.name }}</p>
+                    </div>
 
 
-                <div class="col-3">
-                    <div>{{ blog.title }}</div>
-                </div>
-                <div class="col-3">
-                    <div>{{ blog.body }}</div>
-                </div>
-                <div>
-                    <img class="blog-image" :src="blog.imgUrl" alt="">
-                </div>
+                    <div class="col-3">
+                        <div>{{ blog.title }}</div>
+                    </div>
+                    <div class="col-3">
+                        <div>{{ blog.body }}</div>
+                    </div>
+                    <div>
+                        <img class="blog-image" :src="blog.imgUrl" alt="">
+                    </div>
 
+                </div>
+                <div class="col-6"></div>
             </div>
-            <div class="col-6"></div>
         </div>
-    </div>
+    </router-link>
 </template>
 
 
